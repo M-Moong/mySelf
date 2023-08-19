@@ -1,5 +1,10 @@
-import Container from "@/components/Container";
+import "@/styles/App.module.css";
 import RootLayout from "@/layout/RootLayout";
+import ContainerFirst from "./sections/ContainerFirst";
+import ContainerSecond from "./sections/ContainerSecond";
+import ContainerThird from "./sections/ContainerThird";
+import ContainerForth from "./sections/ContainerForth";
+import ContainerFifth from "./sections/ContainerFifth";
 
 function App() {
 
@@ -19,13 +24,13 @@ function App() {
 		'bg-purple-500',
 	];
 
-  const list = colorName.map((className, index)=> 
-    <Container key={className} className={className} headline={headline[index]} />
-    )
-
   return (
     <RootLayout >
-      {list}
+      <ContainerFirst className={colorName[0]} headline={headline[0]}/>
+      <ContainerSecond className={colorName[1]} headline={headline[1]}/>
+      <ContainerThird className={colorName[2]} headline={headline[2]}/>
+      <ContainerForth className={colorName[3]} headline={headline[3]}/>
+      <ContainerFifth className={colorName[4]} headline={headline[4]}/>
     </RootLayout>
   );
 
