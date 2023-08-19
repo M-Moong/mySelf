@@ -11,11 +11,21 @@ function App() {
     "8월 17일",
   ];
 
+  const colorName = [ 
+		'bg-rose-500',
+		'bg-sky-500',
+		'bg-red-500',
+		'bg-green-500',
+		'bg-purple-500',
+	];
 
+  const list = colorName.map((className, index)=> 
+    <Container key={className} className={className} headline={headline[index]} />
+    )
 
   return (
     <RootLayout >
-      <Container headline={headline} />
+      {list}
     </RootLayout>
   );
 
