@@ -3,13 +3,23 @@ import RootLayout from "@/layout/RootLayout";
 
 function App() {
 
+  const headline = [
+    "8월 10일",
+    "8월 11일",
+    "8월 14일",
+    "8월 16일",
+    "8월 17일",
+  ];
+
+
+
   return (
-    <RootLayout>
-      <Container headline="장미 Container" colorClassName="bg-rose-500" />
-      <Container headline="스카이 Container" colorClassName="bg-sky-500" />
-      <Container headline="보라 Container" colorClassName="bg-purple-500" />
+    <RootLayout >
+      <Container headline={headline} />
     </RootLayout>
   );
+
+
 }
 
 export default App;

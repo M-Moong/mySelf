@@ -1,9 +1,26 @@
-function Container({ headline, colorClassName, children }) {
+import SectionTitle from "./SectionTitle";
+
+function Container({ headline }) {
+
+	const colorName = [
+		'bg-rose-500',
+		'bg-sky-500',
+		'bg-red-500',
+		'bg-green-500',
+		'bg-purple-500',
+	];
+
 	return (
-		<section className={`h-screen ${colorClassName} p-5`}>
-			<h2 className="text-black">{headline}</h2>
-			{children}
-		</section>
+		<>
+			{colorName.map((item) => {
+				return (
+					<section key={item} className={`min-h-[30vh] ${item} p-5`} >
+						<SectionTitle headline={headline} />
+					</section>
+				);
+			})}
+		</>
+
 	);
 }
 
